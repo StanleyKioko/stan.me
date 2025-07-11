@@ -3,7 +3,7 @@ import logo from '../assets/logo.jpg'
 import {FaBars, FaTimes, FaGithub, FaLinkedin} from 'react-icons/fa'
 import {BsFillPersonLinesFill} from 'react-icons/bs'
 import { HiOutlineMail } from 'react-icons/hi'
-import {Link } from 'react-scroll'
+import {Link} from 'react-scroll'
 
 const Navbar = () => {
     const [nav, setNav] = useState(false);
@@ -37,13 +37,24 @@ const Navbar = () => {
             {!nav ? <FaBars /> : <FaTimes />}
         </div>
         {/*Mobile menu*/}
-        <ul className={!nav? 'hidden': 'absolute top-0 left-0 w-full h-screen bg-[#0a192f] flex flex-col justify-center items-center text-gray-300 md:hidden'}>
-            <li className="py-6 text-4xl">home</li>
-            <li className="px-6 text-4xl">about</li>
-            <li className="px-6 text-4xl">skills</li>
-            <li className="px-6 text-4xl">projects</li>
-            <li className="px-6 text-4xl">contact</li>
-        </ul>
+        {/*Mobile menu*/}
+<ul className={!nav? 'hidden': 'absolute top-0 left-0 w-full h-screen bg-[#0a192f] flex flex-col justify-center items-center text-gray-300 md:hidden'}>
+    <li className="py-6 text-4xl">
+        <Link onClick={handleClick} to="home" smooth={true} duration={500}>home</Link>
+    </li>
+    <li className="px-6 text-4xl">
+        <Link onClick={handleClick} to="about" smooth={true} duration={500}>about</Link>
+    </li>
+    <li className="px-6 text-4xl">
+        <Link onClick={handleClick} to="skills" smooth={true} duration={500}>skills</Link>
+    </li>
+    <li className="px-6 text-4xl">
+        <Link onClick={handleClick} to="work" smooth={true} duration={500}>projects</Link>
+    </li>
+    <li className="px-6 text-4xl">
+        <Link onClick={handleClick} to="contact" smooth={true} duration={500}>contact</Link>
+    </li>
+</ul>
 
         {/*Social icons*/}
         <div className="hidden lg:flex fixed flex-col top-[35%] left-0">
