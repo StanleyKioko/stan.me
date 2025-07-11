@@ -16,19 +16,19 @@ const Navbar = () => {
         {/*menu*/}
          <ul className="hidden md:flex">
             <li>
-                <Link to="home" smooth={true} duration={500}>home</Link>
+                <Link to="home" smooth={true} duration={500}>Home</Link>
                 </li>
             <li>
-                <Link to="about" smooth={true} duration={500}>about</Link>
+                <Link to="about" smooth={true} duration={500}>About</Link>
             </li>
             <li>
-                <Link to="skills" smooth={true} duration={500}>skills</Link>
+                <Link to="skills" smooth={true} duration={500}>Skills</Link>
             </li>
             <li>
-                <Link to="work" smooth={true} duration={500}>projects</Link>
+                <Link to="work" smooth={true} duration={500}>Projects</Link>
             </li>
             <li>
-                <Link to="contact" smooth={true} duration={500}>contact</Link>
+                <Link to="contact" smooth={true} duration={500}>Contact</Link>
             </li>
             </ul>
         
@@ -40,19 +40,19 @@ const Navbar = () => {
         {/*Mobile menu*/}
 <ul className={!nav? 'hidden': 'absolute top-0 left-0 w-full h-screen bg-[#0a192f] flex flex-col justify-center items-center text-gray-300 md:hidden'}>
     <li className="py-6 text-4xl">
-        <Link onClick={handleClick} to="home" smooth={true} duration={500}>home</Link>
+        <Link onClick={handleClick} to="home" smooth={true} duration={500}>Home</Link>
     </li>
     <li className="px-6 text-4xl">
-        <Link onClick={handleClick} to="about" smooth={true} duration={500}>about</Link>
+        <Link onClick={handleClick} to="about" smooth={true} duration={500}>About</Link>
     </li>
     <li className="px-6 text-4xl">
-        <Link onClick={handleClick} to="skills" smooth={true} duration={500}>skills</Link>
+        <Link onClick={handleClick} to="skills" smooth={true} duration={500}>Skills</Link>
     </li>
     <li className="px-6 text-4xl">
-        <Link onClick={handleClick} to="work" smooth={true} duration={500}>projects</Link>
+        <Link onClick={handleClick} to="work" smooth={true} duration={500}>Projects</Link>
     </li>
     <li className="px-6 text-4xl">
-        <Link onClick={handleClick} to="contact" smooth={true} duration={500}>contact</Link>
+        <Link onClick={handleClick} to="contact" smooth={true} duration={500}>Contact</Link>
     </li>
 </ul>
 
