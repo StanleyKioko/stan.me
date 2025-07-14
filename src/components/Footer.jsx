@@ -5,7 +5,7 @@ import {BsFillPersonLinesFill} from 'react-icons/bs'
 
 const Footer = () => {
   return (
-    <footer className="w-full bg-[#0a192f] text-gray-300 py-8 border-t border-gray-600">
+    <footer className="w-full bg-[#0a192f] text-gray-300 py-8 border-t border-gray-600 pb-16">
       <div className="max-w-[1000px] mx-auto px-8">
         <div className="flex flex-col md:flex-row justify-between items-center">
           <div className="mb-4 md:mb-0">
