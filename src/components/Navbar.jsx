@@ -242,7 +242,7 @@ const Navbar = () => {
                     <li className="w-[160px] h-[50px] flex justify-between items-center ml-[-110px] hover:ml-[-10px] duration-300 bg-[#565f69] rounded-r-md">
                         <a 
                             className='flex justify-between items-center w-full text-white pl-6 pr-2'
-                            href="/resume.pdf"
+                            href="http://localhost:3000/#/resume"
                             target="_blank"
                             rel="noopener noreferrer"
                         >
