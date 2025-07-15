@@ -1,7 +1,8 @@
 import React from 'react'
+import { Link } from 'react-scroll'
+import { ReactTyped } from "react-typed";
 import { HiArrowRight, HiCode } from 'react-icons/hi'
 import { FaGithub, FaLinkedin, FaTwitter } from 'react-icons/fa'
-import { ReactTyped } from "react-typed";
 
 const Home = () => {
   return (
@@ -47,16 +48,28 @@ const Home = () => {
           </p>
 
           <div className="flex flex-wrap gap-4 mt-4">
-            <a href="#work" className='text-white group border-2 border-pink-600 px-8 py-3 flex items-center bg-pink-600 hover:bg-transparent transition-all duration-300 rounded'>
+            <Link
+            to="work"
+            smooth={true}
+            duration={500}
+            className='text-white group border-2 border-pink-600 px-8 py-3 flex items-center bg-transparent hover:bg-pink-600 hover:text-white transition-all duration-300 rounded'
+            >
               View Work
               <span className='group-hover:rotate-90 duration-300'>
                 <HiArrowRight className="ml-3" />
               </span>
-            </a>
-            
-            <a href="#contact" className='text-white group border-2 px-8 py-3 flex items-center hover:bg-white hover:text-[#0a192f] transition-all duration-300 rounded'>
+            </Link>
+
+            <Link
+              to="contact"
+              smooth={true}
+              duration={500}
+              className='text-white group border-2 px-8 py-3 flex items-center hover:bg-pink-600 hover:text-white transition-all duration-300 rounded'>
               Contact Me
-            </a>
+              <span className='group-hover:rotate-90 duration-300'>
+                <HiArrowRight className="ml-3" />
+              </span>
+            </Link>
           </div>
           
           {/* Social icons */}
