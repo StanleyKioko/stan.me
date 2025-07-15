@@ -17,9 +17,9 @@ const Home = () => {
       <div className="relative z-10 max-w-[1000px] mx-auto px-8 flex flex-col justify-center h-full">
         <div className="flex flex-col gap-3">
           <div className="mb-4">
-            <p className='text-pink-600 text-lg font-medium tracking-wider mb-2 flex items-center'>
+            {/*<p className='text-pink-600 text-lg font-medium tracking-wider mb-2 flex items-center'>
               <HiCode className="mr-2" /> Hi, my name is
-            </p>
+            </p>*/}
             <h1 className="text-5xl sm:text-7xl font-bold text-[#ccd6f6] mb-2 tracking-tight">
               Stanley Mwange
             </h1>
