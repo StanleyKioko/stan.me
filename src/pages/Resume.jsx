@@ -120,7 +120,7 @@ const Resume = () => {
           <section className="mt-6">
             <h3 className="text-xl font-semibold text-pink-600 mb-2">Awards & Recognition</h3>
             <ul className="list-disc pl-5 text-gray-300">
-              <li>🏆 Winner – Groq AI Hackathon (Impact Africa 2025)</li>
+              <li>🏆 Winner –  AI For the Future Hackathon (Impact Africa 2025)</li>
             </ul>
           </section>
           
