@@ -1,5 +1,6 @@
 import React from "react";
 import { ReactTyped } from "react-typed";
+import resumePDF from "../assets/STARNLEY MWANGE.pdf";
 
 const Resume = () => {
   return (
@@ -126,8 +127,8 @@ const Resume = () => {
           
           <div className="mt-8 text-center">
             <a 
-              href="resume.pdf" 
-              download
+              href={resumePDF} 
+              download ="STARNLEY MWANGE.pdf"
               className="inline-block px-6 py-3 bg-pink-600 text-white rounded-md hover:bg-pink-700 transition-colors"
             >
               Download Resume PDF
