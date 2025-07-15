@@ -22,7 +22,7 @@ const Work = () => {
       id: 2,
       name: "Huru Spaces",
       image: huru,
-      description: "Co-working space booking platform with real-time availability.",
+      description: "Making the world Accessible for people with disabilities by providing a platform to book accessible spaces.",
       tech: ["Next.js", "MongoDB", "Stripe"],
       demoLink: "https://huru-hack.vercel.app/",
       codeLink: "https://github.com/StanleyKioko/Huru-Hack"
@@ -31,7 +31,7 @@ const Work = () => {
       id: 3,
       name: "Blobe Logistics",
       image: blobe,
-      description: "Supply chain management solution for tracking deliveries.",
+      description: "A web app for a Logistics and Distribution Company.",
       tech: ["React", "Express", "Node.js"],
       demoLink: "https://data-deck-tau.vercel.app/",
       codeLink: "https://github.com/StanleyKioko/Data-Deck"
@@ -40,7 +40,7 @@ const Work = () => {
       id: 4,
       name: "Data Analytics",
       image: data,
-      description: "Dashboard for visualizing and analyzing business metrics.",
+      description: "A web App for a Data Services Provider.",
       tech: ["React", "Chart.js", "Tailwind CSS"],
       demoLink: "https://blobestan.vercel.app/",
       codeLink: "https://github.com/StanleyKioko/React-Tailwind-Vite-Simple-front-end"
