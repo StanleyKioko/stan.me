@@ -27,10 +27,10 @@ const Home = () => {
               <span className="text-pink-500 ml-2">
                 <ReactTyped
                   strings={[
-                    "Frontend Developer",
-                    "UI/UX Enthusiast",
-                    "React Specialist",
-                    "Web Designer"
+                    "Full Stack Developer",
+                    "Data Analyst",
+                    "Data Engineer",
+                    "AI Engineer"
                   ]}
                   typeSpeed={60}
                   backSpeed={70}
@@ -41,7 +41,7 @@ const Home = () => {
           </div>
           
           <p className="text-[#8892b0] text-lg leading-relaxed py-4 max-w-[700px] border-l-2 border-pink-600 pl-4">
-            I'm a frontend developer specializing in building exceptional digital experiences. 
+            I'm a Full Stack Developer specializing in building exceptional digital experiences. 
             Currently, I'm focused on creating responsive and accessible web applications
             with modern technologies and beautiful designs.
           </p>

@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react'
+import { Link as RouterLink, useLocation } from 'react-router-dom'
 import logo from '../assets/logo.jpg'
 import { FaBars, FaTimes, FaGithub, FaLinkedin } from 'react-icons/fa'
 import { BsFillPersonLinesFill } from 'react-icons/bs'
@@ -6,6 +7,7 @@ import { HiOutlineMail } from 'react-icons/hi'
 import { Link } from 'react-scroll'
 
 const Navbar = () => {
+    const location = useLocation();
     const [nav, setNav] = useState(false);
     const [scrolled, setScrolled] = useState(false);
     const [activeSection, setActiveSection] = useState('home');
@@ -30,6 +32,7 @@ const Navbar = () => {
     // Close mobile menu when clicking a link
     const closeNav = () => setNav(false);
     
+    // Main navigation links that use smooth scrolling
     const navLinks = [
         { id: 'home', text: 'Home' },
         { id: 'about', text: 'About' },
@@ -59,19 +62,32 @@ const Navbar = () => {
         }
     ];
 
+    // Determine if we're on the home page
+    const isHomePage = location.pathname === "/";
+
     return (
         <div className={`fixed w-full h-[70px] flex justify-between items-center px-6 text-gray-300 z-50 transition-all duration-300 ${
             scrolled ? 'bg-[#0a192f]/95 backdrop-blur-sm shadow-md' : 'bg-[#0a192f]'
         }`}>
             {/* Logo */}
             <div className="flex items-center">
-                <Link to="home" smooth={true} duration={500} className="cursor-pointer">
-                    <img 
-                        src={logo} 
-                        alt="Logo" 
-                        className="w-12 h-12 rounded-full object-cover border-2 border-pink-600/30" 
-                    />
-                </Link>
+                {isHomePage ? (
+                    <Link to="home" smooth={true} duration={500} className="cursor-pointer">
+                        <img 
+                            src={logo} 
+                            alt="Logo" 
+                            className="w-12 h-12 rounded-full object-cover border-2 border-pink-600/30" 
+                        />
+                    </Link>
+                ) : (
+                    <RouterLink to="/" className="cursor-pointer">
+                        <img 
+                            src={logo} 
+                            alt="Logo" 
+                            className="w-12 h-12 rounded-full object-cover border-2 border-pink-600/30" 
+                        />
+                    </RouterLink>
+                )}
                 <span className="ml-3 font-bold text-xl hidden sm:block tracking-wide">
                     Stanley<span className="text-pink-600">.</span>
                 </span>
@@ -79,26 +95,49 @@ const Navbar = () => {
             
             {/* Desktop Menu */}
             <ul className="hidden md:flex space-x-2">
-                {navLinks.map(link => (
-                    <li key={link.id}>
-                        <Link 
-                            to={link.id} 
-                            spy={true}
-                            smooth={true} 
-                            duration={500}
-                            offset={-70}
-                            onSetActive={() => setActiveSection(link.id)}
-                            className={`px-4 py-2 cursor-pointer hover:text-pink-500 transition-colors relative ${
-                                activeSection === link.id ? 'text-pink-500 font-medium' : ''
-                            }`}
-                        >
-                            {link.text}
-                            {activeSection === link.id && (
-                                <span className="absolute bottom-0 left-0 right-0 mx-auto w-1/2 h-0.5 bg-pink-600 rounded-full"></span>
-                            )}
-                        </Link>
-                    </li>
-                ))}
+                {isHomePage ? (
+                    // Render smooth scrolling links only on homepage
+                    navLinks.map(link => (
+                        <li key={link.id}>
+                            <Link 
+                                to={link.id} 
+                                spy={true}
+                                smooth={true} 
+                                duration={500}
+                                offset={-70}
+                                onSetActive={() => setActiveSection(link.id)}
+                                className={`px-4 py-2 cursor-pointer hover:text-pink-500 transition-colors relative ${
+                                    activeSection === link.id ? 'text-pink-500 font-medium' : ''
+                                }`}
+                            >
+                                {link.text}
+                                {activeSection === link.id && (
+                                    <span className="absolute bottom-0 left-0 right-0 mx-auto w-1/2 h-0.5 bg-pink-600 rounded-full"></span>
+                                )}
+                            </Link>
+                        </li>
+                    ))
+                ) : (
+                    // On other pages, use regular links back to home
+                    navLinks.map(link => (
+                        <li key={link.id}>
+                            <RouterLink 
+                                to={`/#${link.id}`}
+                                className="px-4 py-2 cursor-pointer hover:text-pink-500 transition-colors relative"
+                            >
+                                {link.text}
+                            </RouterLink>
+                        </li>
+                    ))
+                )}
+                
+                {/* Resume link using React Router */}
+                <RouterLink 
+                    to="/resume" 
+                    className="px-4 py-2 cursor-pointer hover:text-pink-500 transition-colors"
+                >
+                    Resume
+                </RouterLink>
                 
                 <li className="ml-3">
                     <a 
@@ -107,7 +146,7 @@ const Navbar = () => {
                         rel="noopener noreferrer"
                         className="px-5 py-2 border border-pink-600 text-pink-600 rounded-md hover:bg-pink-600 hover:text-white transition-colors"
                     >
-                        Resume
+                        Download CV
                     </a>
                 </li>
             </ul>
@@ -125,19 +164,46 @@ const Navbar = () => {
                     <img src={logo} alt="Logo" className="w-12 h-12 rounded-full object-cover" />
                 </div>
                 <ul className="space-y-8 mb-10">
-                    {navLinks.map(link => (
-                        <li key={link.id} className="text-center">
-                            <Link 
-                                onClick={closeNav}
-                                to={link.id} 
-                                smooth={true} 
-                                duration={500}
-                                className="text-3xl font-medium hover:text-pink-500 transition-colors px-8 py-2"
-                            >
-                                {link.text}
-                            </Link>
-                        </li>
-                    ))}
+                    {isHomePage ? (
+                        // Mobile smooth scroll links on homepage
+                        navLinks.map(link => (
+                            <li key={link.id} className="text-center">
+                                <Link 
+                                    onClick={closeNav}
+                                    to={link.id} 
+                                    smooth={true} 
+                                    duration={500}
+                                    className="text-3xl font-medium hover:text-pink-500 transition-colors px-8 py-2"
+                                >
+                                    {link.text}
+                                </Link>
+                            </li>
+                        ))
+                    ) : (
+                        // Regular links on other pages
+                        navLinks.map(link => (
+                            <li key={link.id} className="text-center">
+                                <RouterLink 
+                                    to={`/#${link.id}`}
+                                    onClick={closeNav}
+                                    className="text-3xl font-medium hover:text-pink-500 transition-colors px-8 py-2"
+                                >
+                                    {link.text}
+                                </RouterLink>
+                            </li>
+                        ))
+                    )}
+                    
+                    {/* Mobile Resume Link */}
+                    <li className="text-center">
+                        <RouterLink 
+                            to="/resume"
+                            onClick={closeNav}
+                            className="text-3xl font-medium hover:text-pink-500 transition-colors px-8 py-2"
+                        >
+                            Resume
+                        </RouterLink>
+                    </li>
                 </ul>
                 
                 <div className="flex space-x-6 mt-8">
