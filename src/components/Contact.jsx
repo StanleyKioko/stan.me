@@ -28,6 +28,16 @@ const Contact = () => {
     }, 1000);
   };
 
+  {/* Scroll Back to top/Home function*/}
+  const scrollToTop = () => {
+    const topElement = document.querySelector('[name="home"]');
+    if (topElement){
+      topElement.scrollIntoView({ behavior: 'smooth' });
+    } else{
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+  };
+
   return (
     <div name="contact" className='w-full min-h-screen bg-[#0a192f] flex justify-center items-center p-4'>
       <div className='max-w-[800px] w-full grid md:grid-cols-2 gap-8 my-16'>
@@ -167,6 +177,27 @@ const Contact = () => {
           </form>
         </div>
       </div>
+      {/* Scroll to top button */}
+       <button 
+        onClick={scrollToTop}
+        className="fixed bottom-8 right-8 bg-gradient-to-r from-pink-600 to-purple-600 hover:from-pink-500 hover:to-purple-500 text-white p-3 rounded-full shadow-lg transition-all duration-300 z-50"
+        aria-label="Scroll to top"
+      >
+        <svg 
+          className="w-6 h-6" 
+          fill="none" 
+          stroke="currentColor" 
+          viewBox="0 0 24 24" 
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path 
+            strokeLinecap="round" 
+            strokeLinejoin="round" 
+            strokeWidth={2} 
+            d="M5 10l7-7m0 0l7 7m-7-7v18" 
+          />
+        </svg>
+      </button>
     </div>
   )
 }
