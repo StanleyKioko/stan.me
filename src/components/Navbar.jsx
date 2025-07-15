@@ -5,6 +5,7 @@ import { FaBars, FaTimes, FaGithub, FaLinkedin } from 'react-icons/fa'
 import { BsFillPersonLinesFill } from 'react-icons/bs'
 import { HiOutlineMail } from 'react-icons/hi'
 import { Link } from 'react-scroll'
+import resumePDF from "../assets/STARNLEY MWANGE.pdf";
 
 const Navbar = () => {
     const location = useLocation();
@@ -141,12 +142,12 @@ const Navbar = () => {
                 
                 <li className="ml-3">
                     <a 
-                        href="/resume.pdf" 
-                        target="_blank"
+                        href={resumePDF}
+                        target="STARNLEY MWANGE.pdf"
                         rel="noopener noreferrer"
                         className="px-5 py-2 border border-pink-600 text-pink-600 rounded-md hover:bg-pink-600 hover:text-white transition-colors"
                     >
-                        Download CV
+                        View Resume
                     </a>
                 </li>
             </ul>
