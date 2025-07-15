@@ -64,10 +64,10 @@ const Home = () => {
             <a href="https://github.com/StanleyKioko" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-white transition-colors duration-300">
               <FaGithub size={24} />
             </a>
-            <a href="#linkedin" className="text-gray-400 hover:text-white transition-colors duration-300">
+            <a href="https://www.linkedin.com/in/starnley-mwange/" className="text-gray-400 hover:text-white transition-colors duration-300">
               <FaLinkedin size={24} />
             </a>
-            <a href="#twitter" className="text-gray-400 hover:text-white transition-colors duration-300">
+            <a href="https://x.com/Starnleykioko" className="text-gray-400 hover:text-white transition-colors duration-300">
               <FaTwitter size={24} />
             </a>
           </div>
