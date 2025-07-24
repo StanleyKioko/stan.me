@@ -90,7 +90,7 @@ const Navbar = () => {
                     </RouterLink>
                 )}
                 <span className="ml-3 font-bold text-xl hidden sm:block tracking-wide">
-                    Stanley<span className="text-pink-600">.</span>
+                    Starnley<span className="text-pink-600">.</span>
                 </span>
             </div>
             

@@ -21,7 +21,7 @@ const Home = () => {
               <HiCode className="mr-2" /> Hi, my name is
             </p>*/}
             <h1 className="text-5xl sm:text-7xl font-bold text-[#ccd6f6] mb-2 tracking-tight">
-              Stanley Mwange
+              Starnley Mwange
             </h1>
             <h2 className="text-3xl sm:text-5xl font-bold text-[#8892b0] flex items-center h-16">
               I'm a{" "}
