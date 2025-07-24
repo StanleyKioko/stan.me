@@ -9,7 +9,7 @@ const Footer = () => {
       <div className="max-w-[1000px] mx-auto px-8">
         <div className="flex flex-col md:flex-row justify-between items-center">
           <div className="mb-4 md:mb-0">
-            <h3 className="text-xl font-semibold text-[#ccd6f6]">Stanley Mwange</h3>
+            <h3 className="text-xl font-semibold text-[#ccd6f6]">Starnley Mwange</h3>
             <p className="text-[#8892b0] mt-2">Frontend Developer</p>
           </div>
           <div className="flex space-x-4">
@@ -28,7 +28,7 @@ const Footer = () => {
           </div>
         </div>
         <div className="text-center mt-8 text-[#8892b0]">
-          <p>&copy; {new Date().getFullYear()} Stanley Mwange. All rights reserved.</p>
+          <p>&copy; {new Date().getFullYear()} Starnley Mwange. All rights reserved.</p>
         </div>
       </div>
     </footer>
