@@ -10,7 +10,7 @@ const Footer = () => {
         <div className="flex flex-col md:flex-row justify-between items-center">
           <div className="mb-4 md:mb-0">
             <h3 className="text-xl font-semibold text-[#ccd6f6]">Starnley Mwange</h3>
-            <p className="text-[#8892b0] mt-2">Frontend Developer</p>
+            <p className="text-[#8892b0] mt-2">Full Stack Developer</p>
           </div>
           <div className="flex space-x-4">
             <a href="https://github.com/StanleyKioko" target="_blank" rel="noopener noreferrer" className="hover:text-pink-600 transition duration-300">
